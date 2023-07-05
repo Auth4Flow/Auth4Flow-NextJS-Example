@@ -1,7 +1,7 @@
 {
-  "name": "next-material-kit",
-  "version": "1.2.1",
-  "description": "NextJS Version of Material Kit React by Creative Tim (https://creative-tim.com)",
+  "name": "auth4flow-nextjs-example",
+  "version": "0.1.0",
+  "description": "NextJS Version of Material Kit React by Creative Tim (https://creative-tim.com) combined with Auth4Flow",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,9 +12,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/creativetimofficial/nextjs-material-kit.git"
+    "url": "git+https://github.com/Auth4Flow/Auth4Flow-NextJS-Example.git"
   },
   "keywords": [
+    "auth4fow",
+    "web3",
+    "flow",
     "next",
     "nextjs",
     "react",
@@ -26,12 +29,12 @@
     "material-kit-react",
     "next-material-kit"
   ],
-  "author": "Creative Tim",
+  "author": "BoiseITGuru - Auth4Flow",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/creativetimofficial/nextjs-material-kit/issues"
+    "url": "https://github.com/Auth4Flow/Auth4Flow-NextJS-Example/issues"
   },
-  "homepage": "https://demos.creative-tim.com/nextjs-material-kit",
+  "homepage": "https://github.com/Auth4Flow/Auth4Flow-NextJS-Example",
   "dependencies": {
     "@material-ui/core": "4.11.4",
     "@material-ui/icons": "4.11.2",
