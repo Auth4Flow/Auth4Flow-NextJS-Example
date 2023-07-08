@@ -18,18 +18,32 @@ import CardBody from "/components/Card/CardBody.js";
 import CardHeader from "/components/Card/CardHeader.js";
 import CardFooter from "/components/Card/CardFooter.js";
 import CustomInput from "/components/CustomInput/CustomInput.js";
-
+import { Auth4FlowClient } from "@auth4flow/auth4flow-js";
 import styles from "/styles/jss/nextjs-material-kit/pages/loginPage.js";
 
 const useStyles = makeStyles(styles);
 
 export default function LoginPage(props) {
   const [cardAnimaton, setCardAnimation] = React.useState("cardHidden");
+
   setTimeout(function () {
     setCardAnimation("");
   }, 700);
   const classes = useStyles();
   const { ...rest } = props;
+
+  const handleLogin = () => {
+    try {
+      new Auth4FlowClient({
+        clientKey: "your-client-key",
+        sessionToken: "your-session-token",
+        endpoint: "http://localhost:8000",
+      }).login();
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <div>
       <Header
@@ -136,7 +150,12 @@ export default function LoginPage(props) {
                     />
                   </CardBody>
                   <CardFooter className={classes.cardFooter}>
-                    <Button simple color="primary" size="lg">
+                    <Button
+                      simple
+                      color="primary"
+                      size="lg"
+                      onClick={handleLogin}
+                    >
                       Get started
                     </Button>
                   </CardFooter>

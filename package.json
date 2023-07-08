@@ -36,6 +36,7 @@
   },
   "homepage": "https://github.com/Auth4Flow/Auth4Flow-NextJS-Example",
   "dependencies": {
+    "@auth4flow/auth4flow-js": "file:../Auth4Flow-JS/",
     "@material-ui/core": "4.11.4",
     "@material-ui/icons": "4.11.2",
     "classnames": "2.3.1",
@@ -47,8 +48,8 @@
     "react-datetime": "3.1.1",
     "react-dom": "18.2.0",
     "react-slick": "0.29.0",
-    "styled-components": "5.3.5",
     "sass": "1.54.4",
+    "styled-components": "5.3.5",
     "webpack": "5.74.0"
   },
   "peerDependencies": {
