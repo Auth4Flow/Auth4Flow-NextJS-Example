@@ -26,6 +26,11 @@ const useStyles = makeStyles(styles);
 export default function LoginPage(props) {
   const [cardAnimaton, setCardAnimation] = React.useState("cardHidden");
 
+  const auth4Flow = new Auth4FlowClient({
+    clientKey: "your-client-key",
+    endpoint: "http://localhost:8000",
+  });
+
   setTimeout(function () {
     setCardAnimation("");
   }, 700);
@@ -34,11 +39,7 @@ export default function LoginPage(props) {
 
   const handleLogin = () => {
     try {
-      new Auth4FlowClient({
-        clientKey: "your-client-key",
-        sessionToken: "your-session-token",
-        endpoint: "http://localhost:8000",
-      }).login();
+      auth4Flow.login();
     } catch (error) {
       console.log(error);
     }
