@@ -37,9 +37,9 @@ export default function LoginPage(props) {
   const classes = useStyles();
   const { ...rest } = props;
 
-  const handleLogin = () => {
+  const handleLogin = async () => {
     try {
-      auth4Flow.login();
+      await auth4Flow.login();
     } catch (error) {
       console.log(error);
     }
